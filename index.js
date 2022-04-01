@@ -1,3 +1,7 @@
+const fs = require('fs');
+const path = require('path');
+const fastGlob = require('fast-glob');
+
 async function printEnvVars() {
     const start = Date.now();
     const root = process.env.PWD;
