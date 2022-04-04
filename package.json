@@ -16,7 +16,7 @@
     "vars"
   ],
   "author": "firefliesai",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/firefliesai/extract-env-vars/issues"
   },
