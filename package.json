@@ -1,7 +1,7 @@
 {
-  "name": "extract-env-vars",
-  "version": "1.0.0",
-  "description": "extract env vars from a project",
+  "name": "@firefliesai/extract-env-vars",
+  "version": "0.1.0",
+  "description": "automatically extract env vars from a project",
   "main": "./index.js",
   "bin": "./index.js",
   "repository": {
