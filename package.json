@@ -1,15 +1,11 @@
 {
-  "name": "extract-env-vars",
+  "name": "@firefliesai/extract-env-vars",
   "version": "0.1.0",
   "description": "automatically extract env vars from a project",
   "main": "./lib/cli.js",
   "bin": {
     "extract-env-vars": "./bin/extract-env-vars.js"
   },
-  "exports": {
-    "./package.json": "./package.json",
-    ".": "./lib/cli.js"
-  },  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/firefliesai/extract-env-vars.git"
