@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const fastGlob = require('fast-glob');
 
-async function printEnvVars() {
+async function extractEnvVars() {
     const start = Date.now();
     const root = process.env.PWD;
     /**
-     * if the env var is not directly used as `process.env.${key}`, then
-     * this regex helps identifying cases where it is destructured, like
-     * `const { PAYMENTS_FF_URL, PAYMENTS_FF_USERNAME, PAYMENTS_FF_PASSWORD } = process.env;`
+     * in addition to env vars directly used as `process.env.${key}`, they can also be destructured from `process.env`.
+     * so this regex helps identifying cases where it is destructured, like
+     * `const { APP_PORT, DB_URL } = process.env;`
      */
     const reKey = /\bprocess\.env\.(\w+)\b/g;
     const reDestructuring = /\{.+\}\s*=(?:\n|\s)*process\.env(?!\.)/g;
@@ -43,9 +43,11 @@ async function printEnvVars() {
         .map(([key, val]) => `process.env.${key} = ${typeof val === 'string' ? `'${val}'` : val};`);
         // .map(([key]) => key);
 
-    fs.writeFile(`${root}${path.sep}env-vars-used.txt`, result.join('\n').concat('\n'), (err) => {
+    fs.writeFile(`${root}${path.sep}env-vars.txt`, result.join('\n').concat('\n'), (err) => {
         if (err) return console.error(err);
     });
 
-    console.log('***** result', result, result.length, end - start);
+    console.log('env-vars', result, result.length, end - start);
 }
+
+extractEnvVars();
