@@ -1,0 +1,33 @@
+{
+  "name": "@firefliesai/extract-env-vars",
+  "version": "0.1.1",
+  "description": "automatically extract env vars from a project",
+  "main": "./lib/cli.js",
+  "bin": {
+    "extract-env-vars": "./bin/extract-env-vars.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firefliesai/extract-env-vars.git"
+  },
+  "keywords": [
+    "extract",
+    "env",
+    "vars"
+  ],
+  "author": "firefliesai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firefliesai/extract-env-vars/issues"
+  },
+  "homepage": "https://github.com/firefliesai/extract-env-vars#readme",
+  "dependencies": {
+    "fast-glob": "^3.2.11"
+  },
+  "engines": {
+    "node": ">= 14.15.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
