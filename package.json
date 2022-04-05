@@ -1,6 +1,6 @@
 {
   "name": "@firefliesai/extract-env-vars",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "automatically extract env vars from a project",
   "main": "./lib/cli.js",
   "bin": {
